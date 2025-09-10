@@ -6,6 +6,7 @@
     <AboutSection />
     <ExperinceAndSkills />
     <LatestProject />
+    <Contect />
     <!-- <p>https://www.youtube.com/watch?v=U10h8rrPe6g</p> -->
   </div>
 </template>
@@ -21,6 +22,7 @@ import Services from './components/Services.vue';
 import AboutSection from './components/AboutSection.vue';
 import ExperinceAndSkills from './components/ExperinceAndSkills.vue';
 import LatestProject from './components/LatestProject.vue';
+import Contect from './components/Contect.vue';
 
 onMounted(()=>{
   AOS.init();
