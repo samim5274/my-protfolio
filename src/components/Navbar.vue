@@ -46,10 +46,11 @@
 import {ref} from 'vue'
 
 const Menu =ref([
+  {name:"Home", href:'#home'},
   {name:"Services", href:'#services'},
   {name:"About Me", href:'#about'},
   {name:"Skills", href:'#skills'},
-  {name:"Projects", href:'#projects'},
+  {name:"Projects", href:'#project'},
   {name:"Testimonials", href:'#testimonials'},
   {name:"Contact", href:'#contact'},
 ]);

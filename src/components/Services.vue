@@ -1,5 +1,5 @@
 <template>
-    <section class="text-white mt-20 container mx-auto" id="service">
+    <section class="text-white mt-20 container mx-auto" id="services">
         <div class="px-4 xl:pl-16">
             <h2 class=" text-4xl font-bold text-white mb-4">My Service</h2>
         </div>

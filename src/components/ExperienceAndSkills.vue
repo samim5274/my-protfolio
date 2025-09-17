@@ -1,5 +1,5 @@
 <template>
-    <section id="skils" class="container mx-auto text-white mt-18">
+    <section id="skills" class="container mx-auto text-white mt-18">
         <div class="absolute right-0 to-[110rem] h-full w-full justify-end">
             <span class="flex opacity-20">
                 <span class="w-16 h-32 rounded-l-full flex bg-[#A3D921] blur-2xl"></span>

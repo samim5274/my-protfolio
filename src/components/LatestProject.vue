@@ -1,5 +1,5 @@
 <template>
-    <section id="project" class="container mx-auto text-white mt-20">
+    <section id="projects" class="container mx-auto text-white mt-20">
         <div class="px-4 xl:pl-16">
             <div class="mb-4 md:flex md:justify-between xl:pr-16">
                 <h2 class="text-4xl font-bold text-white">My Latest Project</h2>
