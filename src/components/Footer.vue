@@ -5,7 +5,17 @@
                 <!-- About Section -->
                 <div class="text-center md:text-left">
                     <h3 class="text-2xl font-bold mb-4">SAMIM-HosseN</h3>
-                    <p class="text-gray-400">A passionate web developer creating modern and responsive web applications.</p>
+                    <ol class="text-gray-400 space-y-2 list-decimal list-inside">
+                        <li>
+                            A passionate web developer crafting modern, responsive web applications with clean, maintainable code and scalable design.
+                        </li>
+                        <li>
+                            Committed to delivering seamless user experiences and intuitive interfaces that engage and delight users.
+                        </li>
+                        <li>
+                            Continuously learning new technologies and implementing innovative solutions to solve real-world challenges.
+                        </li>
+                    </ol>
                 </div>
 
                 <!-- Quick Links -->

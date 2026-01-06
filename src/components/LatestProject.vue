@@ -29,11 +29,11 @@
                         class="overlay flex items-center justify-center absolute top-0 left-0 w-full h-full 
                         bg-[#181818] opacity-0 scale-95 group-hover:opacity-80 group-hover:scale-100 
                         transition-all duration-500">
-                            <a class="h-14 w-14 mr-2 border-2 flex items-center justify-center rounded-full border-[#ADB2BE] hover:border-white" :href="project.webURL">
+                            <a class="h-14 w-14 mr-2 border-2 flex items-center justify-center rounded-full border-[#ADB2BE] hover:border-white" target="_blank" :href="project.webURL">
                                 <i class="fa-solid fa-code"></i>
                             </a>
-                            <a class="h-14 w-14 mr-2 border-2 flex items-center justify-center rounded-full border-[#ADB2BE] hover:border-white" :href="project.gitURL">
-                                <i class="fa-solid fa-eye"></i>
+                            <a class="h-14 w-14 mr-2 border-2 flex items-center justify-center rounded-full border-[#ADB2BE] hover:border-white" target="_blank" :href="project.gitURL">
+                                <i class="fa-brands fa-github"></i>
                             </a>
                         </div>
                     </div>
@@ -60,29 +60,29 @@ const projects = ref([
     {
         id:1,
         category:'Web Development',
-        image:'img/project/project-1.jpg',
-        title: 'project 1',
-        description: 'Web development is the process of creating, designing, and maintaining websites or web applications. It involves front-end development for user interfaces and back-end development for server-side logic. Combining creativity and programming skills, web development ensures responsive, functional, and user-friendly digital experiences that meet modern business and personal needs effectively.',
+        image:'img/project/baker-shop.png',
+        title: 'Mr. Paul Bakers',
+        description: 'Mr Paul Bakers is a modern online bakery specializing in premium-quality baked goods and custom-designed cakes for all occasions. From birthdays and weddings to corporate events and special celebrations, the bakery offers a wide range of cakes, pastries, cookies, chocolates, and desserts made with high-quality ingredients and expert craftsmanship.',
         technologies: ['vue.js', 'vuex','Express'],
-        gitURL:'',
-        webURL:''
+        gitURL:'https://github.com/samim5274/mr_paul_bekare',
+        webURL:'https://mrpaulbakers.shop'
     },
     {
         id:2,
         category:'Software',
-        image:'img/project/project-2.jpg',
-        title: 'project 1',
-        description: 'Web development is the process of creating, designing, and maintaining websites or web applications. It involves front-end development for user interfaces and back-end development for server-side logic. Combining creativity and programming skills, web development ensures responsive, functional, and user-friendly digital experiences that meet modern business and personal needs effectively.',
+        image:'img/project/haac.png',
+        title: 'Hazi Abed Ali College',
+        description: 'Hazi Abed Ali College (haac.edu.bd) is a well-recognized non-government degree college located in East Brahmondi, Narsingdi Sadar, Narsingdi District, Dhaka Division, Bangladesh. It was established in 2001 and serves as an academic centre offering higher education up to Bachelor’s Degree (Pass) level under the National University system.',
         technologies: ['vue.js', 'vuex','Express'],
-        gitURL:'',
-        webURL:''
+        gitURL:'https://github.com/samim5274/Hazi_Abid_Ali_College_LV10',
+        webURL:'https://haac.edu.bd/'
     },
     {
         id:3,
         category:'Web Development',
-        image:'img/project/project-3.jpg',
-        title: 'project 1',
-        description: 'Web development is the process of creating, designing, and maintaining websites or web applications. It involves front-end development for user interfaces and back-end development for server-side logic. Combining creativity and programming skills, web development ensures responsive, functional, and user-friendly digital experiences that meet modern business and personal needs effectively.',
+        image:'img/project/dhcPharmacy.png',
+        title: 'Doctor Health Care & Pharmacy',
+        description: 'DHC Pharmacy (dhcpharmacy.shop) is an online health and wellness store designed to offer a wide range of pharmaceutical products, complementing a digital shopping platform. As an online pharmacy portal, it provides a convenient alternative to traditional retail drugstores by giving users the ability to browse and order health-related products from anywhere, anytime.',
         technologies: ['vue.js', 'vuex','Express'],
         gitURL:'',
         webURL:''
@@ -90,31 +90,31 @@ const projects = ref([
     {
         id:4,
         category:'Software',
-        image:'img/project/project-4.jpg',
-        title: 'project 1',
-        description: 'Web development is the process of creating, designing, and maintaining websites or web applications. It involves front-end development for user interfaces and back-end development for server-side logic. Combining creativity and programming skills, web development ensures responsive, functional, and user-friendly digital experiences that meet modern business and personal needs effectively.',
+        image:'img/project/al-faruk-academy.png',
+        title: 'Al-Faruk Academy',
+        description: 'Al-Faruk Academy is a well-established non-government educational institution located in Purba Brahmandi, Narsingdi, Dhaka Division, Bangladesh. It offers schooling up to the junior secondary level, serving students from the local community with a focus on academic growth and personal development. Al-Faruk Academy emphasizes both academic achievement and character-building.',
         technologies: ['vue.js', 'vuex','Express'],
-        gitURL:'',
-        webURL:''
+        gitURL:'https://github.com/samim5274/Al_Faruk_Academy_Narshindhi',
+        webURL:'https://alfarukacademy.edu.bd/'
     },
     {
         id:5,
         category:'Software',
-        image:'img/project/project-5.jpg',
-        title: 'project 1',
-        description: 'Web development is the process of creating, designing, and maintaining websites or web applications. It involves front-end development for user interfaces and back-end development for server-side logic. Combining creativity and programming skills, web development ensures responsive, functional, and user-friendly digital experiences that meet modern business and personal needs effectively.',
+        image:'img/project/hospital.png',
+        title: 'Bangladesh Diabetic & Diagnostic Care Ltd (BDDC)',
+        description: 'Bangladesh Diabetic & Diagnostic Care Ltd. (BDDC) is a modern healthcare facility dedicated to providing reliable medical, diabetic, and diagnostic services to patients with care, accuracy, and professionalism. The institution focuses on supporting patients through quality diagnostics, routine health checkups, and specialized diabetic care.',
         technologies: ['vue.js', 'vuex','Express'],
-        gitURL:'',
+        gitURL:'https://github.com/samim5274/hospital_management_system_lv10',
         webURL:''
     },
     {
         id:6,
         category:'Web Development',
-        image:'img/project/project-6.jpg',
-        title: 'project 1',
-        description: 'Web development is the process of creating, designing, and maintaining websites or web applications. It involves front-end development for user interfaces and back-end development for server-side logic. Combining creativity and programming skills, web development ensures responsive, functional, and user-friendly digital experiences that meet modern business and personal needs effectively.',
+        image:'img/project/nclub.jpg',
+        title: 'Narshindhi Boot Club',
+        description: 'Narsingdi Club is a well-known social and recreational organization that serves as a gathering place for community members, professionals, and local leaders in Narsingdi. The club promotes social interaction, cultural activities, and healthy recreation through a variety of events and facilities.Narsingdi Club plays an important role in strengthening community relationships and cultural development in the region.',
         technologies: ['vue.js', 'vuex','Express'],
-        gitURL:'',
+        gitURL:'https://github.com/samim5274/Narshindhi_Club',
         webURL:''
     },
 ]);
