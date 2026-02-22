@@ -56,12 +56,12 @@ const skills=ref([
     {
         id:2,
         name: 'PHP (Laravel 10)',
-        width: '90%'
+        width: '85%'
     },
     {
         id:4,
         name: 'Database',
-        width: '98%'
+        width: '88%'
     },
 ]);
 

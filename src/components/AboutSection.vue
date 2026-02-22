@@ -28,11 +28,11 @@
                 <p>Hi, I am <strong>SAMIM-HosseN</strong> a dedicated software engineering professional with strong problem-solving skills and a passion for building efficient, user-friendly applications. With a solid educational background in computer science and continuous learning, I aim to leverage technology to create impactful solutions while enhancing my expertise in modern development practices.</p>
                 <div class="grid grid-cols-3 gap-4 max-w-lg pt-8">
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border-[#1f1641] p-3">
-                        <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">120+</h3>
+                        <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">20+</h3>
                         <p class="text-sm sm:text-base text-gray-300">Happy Client</p>
                     </div>
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border-[#1f1641] p-3">
-                        <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">250+</h3>
+                        <h3 class="text-white font-bold text-xl sm:text-2xl lg:text-3xl">70+</h3>
                         <p class="text-sm sm:text-base text-gray-300">Project</p>
                     </div>
                     <div class="text-center rounded-xl bg-[#111a3e] shadow-lg border-[#1f1641] p-3">

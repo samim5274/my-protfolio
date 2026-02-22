@@ -23,40 +23,46 @@
 import {ref} from 'vue'
 const services = ref([
     {
-        id:1,
-        icon: 'fa-solid fa-code',
-        name: 'Web Developement',
-        description: 'Web development is creating, building, and maintaining websites or web applications using frontend and backend technologies.',
+        id: 1,
+        icon: "fa-solid fa-code",
+        name: "Web Application Development",
+        description:
+        "I develop scalable and high-performance web applications using modern technologies like Vue.js and Laravel. Each solution is built with clean architecture, responsive design, and optimized performance to meet real-world business needs.",
     },
     {
-        id:2,
-        icon: 'fa-solid fa-screwdriver-wrench',
-        name: 'Software Development',
-        description: 'Software development is the process of designing, coding, testing, and maintaining programs or applications for computers.',
+        id: 2,
+        icon: "fa-solid fa-layer-group",
+        name: "Full Stack Development",
+        description:
+        "From frontend to backend and database integration, I provide complete end-to-end web solutions. I ensure seamless communication between UI, API, and database for a smooth user experience.",
     },
     {
-        id:3,
-        icon: 'fa-solid fa-database',
-        name: 'Database Engineer',
-        description: 'A database is an organized collection of data stored electronically, allowing efficient storage, retrieval, and management.',
+        id: 3,
+        icon: "fa-solid fa-display",
+        name: "Frontend Development",
+        description:
+        "I create modern, interactive, and fully responsive user interfaces using Vue.js, Tailwind CSS, and JavaScript. My focus is on performance, usability, and clean UI design.",
     },
     {
-        id:4,
-        icon: 'fa-solid fa-pen-nib',
-        name: 'Graphic Design',
-        description: 'Graphics refers to visual images or designs created digitally or manually to communicate information or enhance visual appeal.',
+        id: 4,
+        icon: "fa-solid fa-server",
+        name: "Backend Development",
+        description:
+        "I build secure and efficient backend systems with RESTful APIs, authentication, role-based access control, and database management to ensure reliability and scalability.",
     },
     {
-        id:5,
-        icon: 'fa-brands fa-edge',
-        name: 'Web Design',
-        description: 'Web design is the process of planning and creating the visual layout, user interface, and overall look of websites.',
+        id: 5,
+        icon: "fa-solid fa-database",
+        name: "Software Maintenance & Optimization",
+        description:
+        "I design structured and optimized database systems with proper indexing, query optimization, and secure data handling to maintain performance and stability.",
     },
     {
-        id:6,
-        icon: 'fa-solid fa-user-secret',
-        name: 'Cyber Security',
-        description: 'Cybersecurity is the practice of protecting computers, networks, and data from unauthorized access, attacks, or damage.',
+        id: 6,
+        icon: "fa-solid fa-plug",
+        name: "API Integration & Real-Time Systems",
+        description:
+        "I integrate third-party services such as payment gateways, email services, and WebSocket-based real-time features to enhance application functionality and user engagement.",
     },
 ]);
 </script>

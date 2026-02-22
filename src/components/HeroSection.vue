@@ -11,6 +11,9 @@
                         <h1 class="pt-4 text-white font-bold text-4xl md:text-5xl lg:text-6xl">
                             Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#A3D921] to-[#046425]">SAMIM-HosseN</span>                            
                         </h1>
+                        <h4 class="font-bold text-2xl sm:text-3xl md:text-4xl mt-3 leading-tight">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#046425] to-[#A3D921]">Software Developer</span>
+                        </h4>
                     </div>
                     
                     <p class="text-gray-300 pt-8 text-center lg:text-left mx-auto max-w-xl">I am a passionate web developer skilled in Laravel and Vue.js. I enjoy building user-friendly applications, learning new technologies, and growing as a full stack developer.</p>
@@ -18,7 +21,7 @@
                     <div class="flex items-center gap-3 pt-9 flex-col sm:flex-row sm:w-max sm:mx-auto lg:mx-0">
                         <button class="px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
                             <span class="absolute inset-0 rounded-3xl group-hover:scale-105 origin-center transition-all ease-in-out bg-gradient-to-r from-[#A3D921] to-[#046425] border-2 border-transparent"></span>
-                            <span class="relative flex items-center justify-center text-white">Hire Me</span>
+                            <span class="relative flex items-center justify-center text-white">Get In Touch</span>
                         </button>
                         <button class="border border-[#A3D921] px-6 md:px-7 py-3 rounded-full relative group w-full sm:w-max flex justify-center">
                             <div class="hover:scale-105 transition-all ease-in-out flex justify-center items-center relative">
