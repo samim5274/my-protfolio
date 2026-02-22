@@ -43,13 +43,14 @@
 
             <!-- Copyright -->
             <div class="text-center text-gray-500 mt-8 pt-6 border-t border-gray-700">
-                <p>&copy; 2025 SAMIM-HosseN. All rights reserved.</p>
+                <p>&copy; {{ currentYear }} SAMIM-HosseN. All rights reserved.</p>
             </div>
         </div>
     </footer>
 </template>
 
 <script setup>
+const currentYear = new Date().getFullYear();
 </script>
 
 <style scoped>

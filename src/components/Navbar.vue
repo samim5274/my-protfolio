@@ -51,8 +51,8 @@ const Menu =ref([
   {name:"About Me", href:'#about'},
   {name:"Skills", href:'#skills'},
   {name:"Projects", href:'#projects'},
-  {name:"Testimonials", href:'#testimonials'},
   {name:"Contact", href:'#contact'},
+  {name:"Testimonials", href:'#testimonials'},
 ]);
 
 const isMenuOpen = ref(false)
