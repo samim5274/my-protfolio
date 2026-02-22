@@ -40,15 +40,15 @@
                 </div>
             </div>        
             <div class="flex items-center justify-center w-full h-full rounded-lg border border-[#111a3e] bg-[#111a3e] backdrop-blur-md p-6">
-                <form action="" class="flex flex-col w-full max-w-lg" data-aso="zoom-in-up">
+                <form @submit.prevent="sendEmail" class="flex flex-col w-full max-w-lg" data-aso="zoom-in-up">
                     
                     <!-- Email -->
                     <div class="mb-6">
                     <label for="email" class="text-white block mb-2 text-sm font-medium">Email</label>
                     <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
+                        v-model="email"
+                        type="email"
+                        id="email"
                         class="bg-[#111827] placeholder:text-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-[#046425]" 
                         placeholder="Enter your email">
                     </div>
@@ -57,9 +57,9 @@
                     <div class="mb-6">
                     <label for="subject" class="text-white block mb-2 text-sm font-medium">Subject</label>
                     <input 
-                        type="text" 
+                        v-model="subject"
+                        type="text"
                         id="subject" 
-                        name="subject" 
                         class="bg-[#111827] placeholder:text-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-[#046425]" 
                         placeholder="Enter your subject">
                     </div>
@@ -68,19 +68,23 @@
                     <div class="mb-6">
                     <label for="message" class="text-white block mb-2 text-sm font-medium">Message</label>
                     <textarea 
-                        id="message" 
-                        name="message" 
+                        v-model="message"
+                        id="message"
                         rows="4"
                         class="bg-[#111827] placeholder:text-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 focus:outline-none focus:ring-2 focus:ring-[#046425]" 
                         placeholder="Let's talk about ..."></textarea>
                     </div>
 
                     <!-- Button -->
-                    <button 
-                    type="submit"
-                    class="w-full px-6 py-3 rounded-full flex justify-center items-center text-white bg-[#046425] border-2 border-transparent hover:bg-transparent hover:border-[#A3D921] hover:text-[#A3D921] transition">
-                    Send Message
+                    <button
+                        type="submit"
+                        :disabled="loading"
+                        class="w-full px-6 py-3 rounded-full flex justify-center items-center text-white bg-[#046425] border-2 border-transparent hover:bg-transparent hover:border-[#A3D921] hover:text-[#A3D921] transition disabled:opacity-60 disabled:cursor-not-allowed">
+                        {{ loading ? "Sending..." : "Send Message" }}
                     </button>
+                    <p v-if="status" class="mt-4 text-sm text-white/80">
+                        {{ status }}
+                    </p>
                 </form>
             </div>
             <div class="bg-gradient-to-br from-[#A3D921] to-[#046425] blur-2xl h-20 w-80 z-0 absolute -top-1/2 -left-4 transform -translate-x-2/3 -translate-1/2"></div>
@@ -88,8 +92,56 @@
     </section>
 </template>
 
-<script lang="ts" setup>
+<script setup>
+import { ref } from "vue";
+import emailjs from "@emailjs/browser";
 
+// EmailJS credentials
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+const email = ref("");
+const subject = ref("");
+const message = ref("");
+
+const loading = ref(false);
+const status = ref<string | null>(null);
+
+async function sendEmail() {
+  status.value = null;
+
+  // basic validation
+  if (!email.value || !subject.value || !message.value) {
+    status.value = "সব ফিল্ড পূরণ করো।";
+    return;
+  }
+
+  loading.value = true;
+
+  try {
+    await emailjs.send(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      {
+        from_email: email.value,
+        subject: subject.value,
+        message: message.value,
+      },
+      { publicKey: PUBLIC_KEY }
+    );
+
+    status.value = "✅ Message sent successfully!";
+    email.value = "";
+    subject.value = "";
+    message.value = "";
+  } catch (err) {
+    console.log(err);
+    status.value = "❌ Failed to send. আবার চেষ্টা করো।";
+  } finally {
+    loading.value = false;
+  }
+}
 </script>
 
 <style>
