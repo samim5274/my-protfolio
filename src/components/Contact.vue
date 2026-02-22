@@ -92,14 +92,14 @@
     </section>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from "vue";
 import emailjs from "@emailjs/browser";
 
 // EmailJS credentials
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = "service_gmg9qn7";
+const TEMPLATE_ID = "template_tqqq00s";
+const PUBLIC_KEY = "wBPGwxVfbj1J_wfod";
 
 const email = ref("");
 const subject = ref("");
@@ -113,7 +113,7 @@ async function sendEmail() {
 
   // basic validation
   if (!email.value || !subject.value || !message.value) {
-    status.value = "সব ফিল্ড পূরণ করো।";
+    status.value = "Fill input fileds.";
     return;
   }
 
@@ -124,8 +124,9 @@ async function sendEmail() {
       SERVICE_ID,
       TEMPLATE_ID,
       {
+        name: "Website Visitor",
         from_email: email.value,
-        subject: subject.value,
+        title: subject.value,
         message: message.value,
       },
       { publicKey: PUBLIC_KEY }
@@ -137,7 +138,7 @@ async function sendEmail() {
     message.value = "";
   } catch (err) {
     console.log(err);
-    status.value = "❌ Failed to send. আবার চেষ্টা করো।";
+    status.value = "❌ Failed to send. Try again.";
   } finally {
     loading.value = false;
   }
