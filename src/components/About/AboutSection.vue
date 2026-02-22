@@ -309,7 +309,7 @@
             <p class="text-gray-300 mb-6">
                 Have a project in mind? Let’s discuss your idea and turn it into reality.
             </p>
-            <button class="px-8 py-3 bg-gradient-to-r from-[#A3D921] to-[#046425] rounded-full text-white font-semibold">
+            <button @click="getInTouch" class="px-8 py-3 bg-gradient-to-r from-[#A3D921] to-[#046425] rounded-full text-white font-semibold">
                 Get In Touch
             </button>
         </section>
@@ -325,6 +325,13 @@ import {ref} from 'vue'
 import Navbar from '../Navbar.vue';
 import Footer from '../Footer.vue';
 import BackToTop from '../BackToTop.vue';
+
+import { useRouter } from "vue-router";
+const router = useRouter();
+
+function getInTouch(){
+    router.push('/contact');
+}
 
 const education=ref([
     {
