@@ -133,8 +133,8 @@ const projects = ref([
         description:
         "DHC Pharmacy is an online health and wellness store designed to offer a wide range of pharmaceutical products...",
         technologies: ['Laravel 10', 'Blade', 'Vue','MySql DB'],
-        gitURL: "",
-        webURL: "",
+        gitURL: "https://github.com/samim5274/Doctor_Heath_Care_-_Pharmacy",
+        webURL: "https://dhcpharmacy.shop/",
     },
     {
         id: 4,
@@ -177,7 +177,7 @@ const projects = ref([
         description:
         "A modern POS and Inventory Management System that handles sales, stock tracking, invoicing, and reporting to improve business efficiency and reduce manual errors....",
         technologies: ['Laravel 10', 'Vue','MySql DB'],
-        gitURL: "https://github.com/samim5274/Narshindhi_Club",
+        gitURL: "https://github.com/samim5274/Mini_Pos_System_With_Vue_Frontend_and_LV10_Backend",
         webURL: "",
     },
 ]);

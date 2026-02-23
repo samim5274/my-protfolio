@@ -62,7 +62,7 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 function goAllProject() {
-    router.push("/all-project");
+    router.push("/projects");
 }
 
 const projects = ref([

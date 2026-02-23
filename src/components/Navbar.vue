@@ -49,8 +49,8 @@ const isMenuOpen = ref(false);
 
 const Menu = ref([
   { name: "Home", to: "/" },
-  // { name: "Services", to: "/services" },
   { name: "About", to: "/about" },
+  { name: "Services", to: "/services" },
   // { name: "Skills", to: "/skills" },
   { name: "Projects", to: "/projects" },
   { name: "Contact", to: "/contact" },
