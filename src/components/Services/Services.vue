@@ -4,18 +4,28 @@
         <Services />
 
         <section class="text-white mt-20 container mx-auto" id="services">
-            <div class="px-4 xl:pl-16">
-                <h2 class=" text-4xl font-bold text-white mb-4">My Service List</h2>
+            <div class="px-4 xl:pl-16 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">
+                    My Service List
+                </h2>
+                <div class="relative w-full md:w-72">
+                    <input type="search" v-model="search" placeholder="Search your project title..."
+                        class="w-full px-4 py-2 rounded-lg bg-[#111a3e] 
+                        border border-[#1f1641] 
+                        text-white placeholder-gray-400
+                        focus:outline-none focus:border-blue-500 transition">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-3 text-gray-400"></i>
+                </div>
             </div>
             <div class="py-8 xl:px-16 px-4 sm:py-16 grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3">
-                <div v-for="service in projectLists" :key="service.id" data-aos="fade-up" @click="goDetails(service.id, service.title)" class="px-8 py-12 rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641]">
+                <div v-for="service in filteredProjects" :key="service.id" data-aos="fade-up" @click="goDetails(service.id, service.title)" class="px-8 py-12 rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641]">
                     <div class="mx-auto h-24 text-center xl:h-28 xl:w-28">
                         <div>
                             <i :class="service.icon + ' text-6xl mb-3'"></i>
                         </div>
                     </div>
                     <div class="text-center">
-                        <h3 class="pt-8 text-lg font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-green-500 lg:text-xl">{{ service.title }}</h3>
+                        <h3 class="pt-8 text-lg font-semibold uppercase text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-green-500 lg:text-xl">{{ service.title }} <i class="fa-solid fa-arrow-up-right-from-square"></i></h3>
                         <div class="pt-4 flex flex-wrap gap-2">
                             <span
                                 v-for="(tech, index) in service.technologies"
@@ -54,6 +64,18 @@ const router = useRouter();
 function goDetails(id,title){
     router.push(`/service/${title}/${id}`);
 }
+
+const search = ref("");
+
+const filteredProjects = computed(() => {
+    const q = search.value.trim().toLowerCase();
+
+    if (!q) return projectLists.value;
+
+    return projectLists.value.filter((p) =>
+        p.title.toLowerCase().includes(q)
+    );
+});
 
 const projectLists = ref([
     // =========================
