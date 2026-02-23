@@ -2,13 +2,13 @@
     <div class="bg-[#111827] min-h-screen">
         <Navbar />
         <Services />
-        
+
         <section class="text-white mt-20 container mx-auto" id="services">
             <div class="px-4 xl:pl-16">
                 <h2 class=" text-4xl font-bold text-white mb-4">My Service List</h2>
             </div>
             <div class="py-8 xl:px-16 px-4 sm:py-16 grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3">
-                <div v-for="service in projectLists" :key="service.id" data-aos="fade-up" class="px-8 py-12 rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641]">
+                <div v-for="service in projectLists" :key="service.id" data-aos="fade-up" @click="goDetails(service.id, service.title)" class="px-8 py-12 rounded-xl bg-[#111a3e] shadow-lg border border-[#1f1641]">
                     <div class="mx-auto h-24 text-center xl:h-28 xl:w-28">
                         <div>
                             <i :class="service.icon + ' text-6xl mb-3'"></i>
@@ -50,6 +50,10 @@ import BackToTop from "../BackToTop.vue";
 import Services from "../Services.vue";
 
 const router = useRouter();
+
+function goDetails(id,title){
+    router.push(`/service/${title}/${id}`);
+}
 
 const projectLists = ref([
     // =========================
